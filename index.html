@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=double_arrow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "j8ELCjjEbyo3sT7RY",
+            });
+        })();
+    </script>
+    <link rel="icon" type="image/png" sizes="1200x1200" href="./img/logo.png">
+    <title>Bharath Portfolio</title>
+</head>
+<body class="no-scroll">
+    
+    <section id="preloader">
+        <div class="pre-loader">
+            <div class="pre-loader__box"></div>
+            <div class="pre-loader__box"></div>
+            <div class="pre-loader__box"></div>
+            <div class="pre-loader__box"></div>
+            <div class="pre-loader__box"></div>
+            <div class="pre-loader__box"></div>
+            <div class="pre-loader__box"></div>
+            <div class="pre-loader__box"></div>
+            <div class="pre-loader__box"></div>
+        </div>
+    </section>
+
+    <header>
+        <div class="nav-container"> 
+            <div class="animatedText">Bharath</div>
+            <div class="nav-item">
+                <label class="switch">
+                    <span class="sun"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="#555252"><circle r="5" cy="12" cx="12"></circle><path d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"></path></g></svg></span>
+                    <span class="moon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"></path></svg></span>   
+                    <input type="checkbox" class="input">
+                    <span class="slider"></span>
+                </label>
+                <div class="container">  
+                    <input class="label-check" id="label-check" type="checkbox">
+                    <label for="label-check" class="hamburger-label">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </label>
+                    <ul id="myList" >
+                        <li ><a href="#home" onclick="scrollToPosition(event, 0)">HOME</a></li>
+                        <li ><a href="#aboutMe" onclick="scrollToPosition(event, 700)">ABOUT ME</a> </li>
+                        <li ><a href="#education" onclick="scrollToPosition(event, 1300)">EDUCATION</a></li>
+                        <li ><a href="#skills" onclick="scrollToPosition(event, 1900)">SKILLS</a></li>
+                        <li ><a href="#project" onclick="scrollToPosition(event, 2790)">PROJECT</a></li>
+                        <li ><a href="#certificate" onclick="scrollToPosition(event, 6057)">CERTIFICATE</a></li>   
+                        <li ><a href="#resume" onclick="scrollToPosition(event, 10000)">CONTECT</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="home-content">
+                <div class="hometext-container">
+                        <div class="name-container">
+                            <p><span id="hello">Hello, I'm </span><br> 
+                            <span id="typetxt"></span><br>
+                            <span id="job-title">Full Stack Developer | AI & Data Science Enthusiast</span></p>
+                        </div>
+                        <div class="content-container">
+                            <div id="welcome-txt">
+                                    Welcome to my Portfolio! I'm passionate about buliding
+                                intelligent systems and scalable web applications. Explore
+                                my work and skills to see what I can bring to the table. 
+                            </div>
+                        </div>
+                        <div class="home-link">
+                            <button type="button"><a href="#project" onclick="scrollToPosition(event, 2790)">PROJECT</a></button>
+                            <button type="button" id="resume-btn">RESUME</button>
+                            <iframe id="pdfFrame" src="./bharath Resume.pdf" style="display: none;"></iframe>
+                            
+                            <div class="pdf-container">
+                                <div class="pdf-header">
+                                    <h1 id="pdf-title">PDF Viewer :</h1>
+                                    <div class="pdf-btn">
+                                        <button id="print-btn">Print</button>
+                                        <button id="download-btn">Download</button>
+                                    </div>
+                                </div>
+                                <div class="pdf-body">
+                                    <canvas id="pdf-viewer"></canvas>
+                                </div>
+                                <div class="pdf-footer">
+                                    <div>
+                                        Rendering with <a href="./bharath Resume.pdf" class="pdf-link" target="_blank">PDF.js</a>
+                                    </div>
+                                    <div id="pdf-status" >Loading...</div>
+                                </div>
+                            </div>   
+                        </div>        
+                </div>
+                <div class="home-img">
+                    <svg viewBox="15  0 180 180"  preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+                        <path  transform="translate(100 100)" >
+                            <animate attributeName="d" dur="10000ms" repeatCount="indefinite"
+                                values="M47.4,-71.7C61.3,-64.8,72.3,-51.4,77.2,-36.5C82.1,-21.5,80.9,-5,77.9,10.8C75,26.6,70.3,41.7,60.7,52.4C51.1,63,36.6,69.1,22.1,71.7C7.7,74.2,-6.8,73.2,-22.8,71.3C-38.8,69.4,-56.4,66.8,-66.8,56.8C-77.3,46.7,-80.6,29.4,-83.2,11.9C-85.8,-5.5,-87.6,-23.2,-80.5,-36.1C-73.5,-48.9,-57.7,-57.1,-42.8,-63.5C-27.9,-69.9,-14,-74.7,1.4,-76.8C16.7,-79,33.5,-78.6,47.4,-71.7Z ;
+                                    M44.1,-67.4C59.1,-58.9,74.5,-50,83.3,-36.4C92.2,-22.8,94.4,-4.4,89.8,11.4C85.2,27.3,73.8,40.7,61.5,51.1C49.1,61.6,35.8,69,21.4,73.6C7,78.2,-8.5,80,-24.8,78.1C-41.1,76.3,-58.2,70.7,-66.6,58.9C-75,47.1,-74.7,28.9,-75.9,11.7C-77.1,-5.4,-79.8,-21.5,-75.5,-35.9C-71.1,-50.3,-59.9,-62.9,-46.1,-71.9C-32.4,-80.9,-16.2,-86.2,-0.8,-84.9C14.5,-83.6,29.1,-75.8,44.1,-67.4Z;
+                                    M46,-74C58.1,-63.9,65.1,-48.4,72.9,-32.9C80.7,-17.3,89.1,-1.6,88.4,13.7C87.7,28.9,77.7,43.8,66,56.8C54.2,69.8,40.6,80.9,24.6,87C8.7,93.1,-9.6,94.2,-23.8,87.2C-37.9,80.2,-47.9,65.2,-57.2,51.3C-66.5,37.4,-75.1,24.7,-80.6,9.5C-86,-5.8,-88.4,-23.6,-83.1,-39.1C-77.8,-54.6,-64.9,-67.8,-49.8,-76.5C-34.7,-85.2,-17.3,-89.4,-0.2,-89.1C17,-88.9,34,-84.1,46,-74Z;
+                                    M45.7,-71C60,-61.9,72.9,-50.6,80.7,-36.1C88.5,-21.6,91.2,-4.1,89.1,13C87,30.1,80,46.7,68.9,59.8C57.7,72.8,42.3,82.3,26.5,84C10.8,85.7,-5.4,79.7,-19.4,72.6C-33.3,65.5,-45,57.3,-54.1,46.9C-63.2,36.4,-69.7,23.7,-72.8,9.8C-75.9,-4.2,-75.6,-19.3,-70.5,-32.9C-65.3,-46.5,-55.4,-58.5,-42.8,-68.4C-30.2,-78.3,-15.1,-86,0.3,-86.5C15.7,-86.9,31.4,-80.1,45.7,-71Z;
+                                    M47.3,-75C59.1,-66.1,64.8,-49.2,70.5,-33.2C76.2,-17.3,81.9,-2.4,81,12.5C80.2,27.3,72.9,42,62.7,55C52.5,68,39.5,79.2,24.1,85.2C8.6,91.1,-9.3,91.9,-23.5,85.3C-37.7,78.8,-48.3,64.9,-56.9,51.3C-65.6,37.8,-72.3,24.6,-75.2,10.3C-78.1,-4,-77.2,-19.4,-71.8,-33.5C-66.5,-47.6,-56.8,-60.4,-44.1,-68.9C-31.4,-77.4,-15.7,-81.6,1,-83.2C17.8,-84.8,35.6,-83.9,47.3,-75Z;
+                                    M47,-74.8C59.8,-64.8,68.4,-50,75.4,-34.5C82.4,-19,87.8,-2.8,87.4,13.9C87.1,30.6,81,47.8,69.3,58.4C57.5,69,40.1,73,23.3,76.9C6.5,80.8,-9.7,84.4,-23,79.8C-36.3,75.2,-46.7,62.4,-54.9,49.5C-63,36.6,-68.9,23.7,-71.6,9.8C-74.3,-4,-73.8,-18.7,-69.7,-33.5C-65.5,-48.2,-57.8,-63,-45.5,-73.3C-33.3,-83.5,-16.7,-89.3,0.2,-89.6C17.1,-89.9,34.1,-84.8,47,-74.8Z;
+                                    M43,-64.7C57.4,-57.6,72,-48.6,80.8,-35.2C89.6,-21.8,92.6,-4,90.7,13.4C88.8,30.9,82,48.1,70.1,59.3C58.1,70.5,41,75.8,24,79.9C7.1,83.9,-9.6,86.7,-23.7,82C-37.8,77.3,-49.4,65,-60.3,52.3C-71.3,39.6,-81.7,26.4,-85,11.5C-88.3,-3.4,-84.4,-20.1,-77.9,-36C-71.4,-52,-62.1,-67.1,-48.7,-74.7C-35.2,-82.2,-17.6,-82.2,-1.7,-79.6C14.3,-77,28.6,-71.8,43,-64.7Z;
+                                    M47.4,-71.7C61.3,-64.8,72.3,-51.4,77.2,-36.5C82.1,-21.5,80.9,-5,77.9,10.8C75,26.6,70.3,41.7,60.7,52.4C51.1,63,36.6,69.1,22.1,71.7C7.7,74.2,-6.8,73.2,-22.8,71.3C-38.8,69.4,-56.4,66.8,-66.8,56.8C-77.3,46.7,-80.6,29.4,-83.2,11.9C-85.8,-5.5,-87.6,-23.2,-80.5,-36.1C-73.5,-48.9,-57.7,-57.1,-42.8,-63.5C-27.9,-69.9,-14,-74.7,1.4,-76.8C16.7,-79,33.5,-78.6,47.4,-71.7Z;"
+                                >
+                            </animate>
+                        </path>
+                    </svg>
+                    <img src="./img/image-1.png" alt="bharath" class="blob-image">
+                </div>
+            </div>
+        </section>
+        <div class="animate-line">
+            <div class="barline"></div>
+        </div>
+        <div id="about_edu_skill">
+            <section id="aboutMe" class="section">
+                <div class="header-container" >
+                    <div class="header-name">About me</div>
+                </div>
+                <div class="about_me-container">
+                    <div class="about-img">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1000" height="1000" viewBox="0 0 1000 1000" xml:space="preserve">
+                            <g transform="matrix(0.2504 0 0 0.2504 500.0363 543.6)" id="422116">
+                                <circle style="stroke: none; stroke-width: 1; fill: #ff8e3d; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4;  fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke" cx="0" cy="0" r="1500"/>
+                            </g>            
+                            <g transform="translate(0, 0)">
+                                <g class="dashed-line" transform="translate(495 542)" id="689629" >
+                                    <g><animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 0 0" to="360 0 0" dur="10s" repeatCount="indefinite"/>
+                                        <g transform="scale(0.2504)" id="689629">
+                                            <circle cx="0" cy="0" r="1655" stroke="#00ccff" stroke-width="30" fill="transparent" stroke-dasharray="100 90" stroke-linecap="round"/>
+                                        </g>
+                                    </g>
+                                </g>
+                                <g class="about-svg" transform="matrix(0.221 0 0 0.2193 692.6383 889.1947)" id="669133">
+                                    <path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke" transform=" translate(-517.4963, -318.9268)" d="M 1008.37 15.1043 C 1035.02 37.7502 1038.35 77.8064 1014.75 103.623 C 766.409 375.357 438.618 561.882 78.1536 636.584 C 43.9064 643.681 11.1701 620.359 5.31604 585.877 V 585.877 C -0.538068 551.396 22.7077 518.822 56.9347 511.628 C 388.05 442.034 689.206 270.665 918.169 21.5542 C 941.837 -4.19615 981.715 -7.54158 1008.37 15.1043 V 15.1043 Z" stroke-linecap="round"/>
+                                </g>
+                                <g transform="matrix(0.2447 0 0 0.2447 499.9375 543.5001)" id="791756">
+                                    <path style="stroke: none; stroke-width: 1; fill: #cb1bf6; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke" transform=" translate(-1726.1499, -1750.9974)" d="M 1003.12 3300.2 C 1015.08 3273.48 1046.4 3261.61 1073.47 3272.71 C 1393.89 3404.01 1747.66 3430.81 2084.2 3349.27 C 2112.64 3342.38 2141.82 3358.83 2149.61 3387.05 C 2157.41 3415.26 2140.87 3444.54 2112.42 3451.49 C 1752.12 3539.52 1373.11 3510.81 1030.18 3369.52 C 1003.1 3358.36 991.162 3326.92 1003.12 3300.2 Z M 3321.53 1258.66 C 3349.54 1250.18 3379.22 1265.99 3386.86 1294.26 C 3464.86 1582.82 3467.73 1886.86 3394.79 2177.34 C 3321.84 2467.82 3175.67 2734.43 2970.6 2951.91 C 2950.51 2973.22 2916.88 2973.14 2896.2 2952.43 C 2875.51 2931.71 2875.61 2898.22 2895.64 2876.9 C 3087.16 2673.01 3223.71 2423.39 3291.98 2151.52 C 3360.25 1879.66 3357.83 1595.14 3285.35 1324.96 C 3277.78 1296.7 3293.51 1267.14 3321.53 1258.66 Z M 758.102 273.597 C 1128.26 38.3599 1572.65 -49.0203 2003.21 27.4901 C 2032.05 32.6142 2050.42 60.7873 2044.44 89.4364 C 2038.45 118.094 2010.38 136.37 1981.57 131.307 C 1578.04 60.3991 1161.81 142.632 814.956 363.059 C 468.103 583.486 216.905 925.409 109.751 1320.86 C 102.1 1349.09 73.6314 1366.75 45.1455 1360 C 16.6676 1353.25 -1.03876 1324.65 6.5664 1296.37 C 120.131 874.061 387.945 508.833 758.102 273.597 Z" stroke-linecap="round"/>
+                                </g>
+                            </g>
+                            <g>
+                                <g transform="rotate(150 900 950)">
+                                    <g class="fade-in1" id="fade-in1" transform="matrix(0.2000 0 0 0.2000 900 950)">
+                                        <path style="stroke: #000000; stroke-width: 0.3; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4;  fill:#ffd000; fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke" transform=" translate(-151.9998, -131.25)" d="M 152 0 L 303.554 262.5 H 0.445557 L 152 0 Z" stroke-linecap="round"/>
+                                    </g>
+                                </g>
+                                <g transform="rotate(150 830 950)">
+                                    <g class="fade-in2"  id="fade-in2" transform="matrix(0.2000 0 0 0.2000 830 950)">
+                                        <path style="stroke: #000000; stroke-width: 0.3; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4;  fill: #ffd000; fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke" transform=" translate(-151.9998, -131.25)" d="M 152 0 L 303.554 262.5 H 0.445557 L 152 0 Z" stroke-linecap="round"/>
+                                    </g>
+                                </g>
+                                <g transform="rotate(150 760 950)">
+                                    <g class="fade-in3"  id="fade-in3" transform="matrix(0.2000 0 0 0.2000 760 950)">
+                                        <path style="stroke: #000000; stroke-width: 0.3; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4;  fill: #ffd000; fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke" transform=" translate(-151.9998, -131.25)" d="M 152 0 L 303.554 262.5 H 0.445557 L 152 0 Z" stroke-linecap="round"/>
+                                    </g>
+                                </g>
+                            </g>
+                            <g>
+                                <g class="trangle-1" transform="matrix(0.2500 0 0 0.2500 90 110)">
+                                    <path d="M152 0 L303.554 262.5 H0.445557 L152 0 Z" fill="#12a50b" />
+                                </g>
+                                <g id="tra-border" transform="matrix(0.2500 0 0 -0.2500 150 150)">
+                                    <path stroke="#12a50b" stroke-width="10" d="M152 0 L303.554 262.5 H0.445557 L152 0 Z" fill="none" stroke-linecap="round" />
+                                </g>
+                            </g>
+                            <g>
+                                <g class="bobule" style="animation-delay: 0.5s;" transform="matrix(0.3000 0 0 0.3000 800 110)">
+                                    <circle cx="0" cy="0" r="150" stroke="#00ccff" stroke-width="5" fill="none" />
+                                </g>
+                                
+                                <g class="bobule" style="animation-delay: 1s;" transform="matrix(0.2000 0 0 0.2000 890 50)">
+                                    <circle cx="0" cy="0" r="150" stroke="#00ccff" stroke-width="5" fill="none" />
+                                </g>
+                                
+                                <g class="bobule" style="animation-delay: 1.5s;" transform="matrix(0.1000 0 0 0.1000 950 90)">
+                                    <circle cx="0" cy="0" r="130" stroke="#00ccff" stroke-width="3" fill="none" />
+                                </g>
+                            </g>
+                        </svg>
+                        <img id="person-img" src="./img/image-2.png" alt="" srcset="">
+                    </div>
+            
+                    <div class="about-content">
+                        <h1 class="item">About me</h1>
+                        <div class="about-paragaraph">
+                            <p class="item" id="about-paragaraph_1">
+                                I'm Bharath, a passionate Artificial Intelligence & Data Science student with a strong interest
+                                in Full-Stack Web Development and Data Analysis. I started my academic
+                                journey with in a Diploma in Mechanical Engineering, but my curiosity for technology led me to pursue a B.Tech in AI & Data Science.
+                            </p>
+                            <p class="item" id="about-paragaraph_2">
+                                I enjoy Solving Problems, buliding interactive web applications, and exploring
+                                AI-based solutions. Although I don't have professional experience yet, I have
+                                Worked on several Project that showcase my Skills in Web development,Artificial intelligent, and data analysis.
+                            </p>  
+                        </div>          
+                    </div>
+                </div>
+            </section>
+            <section id="education" class="section">
+                <div class="header-container">
+                    <div class="header-name">Education</div>
+                </div>
+                <div class="education-container">
+                    <div class="edu1">
+                        <div class="edu-secetion">
+                            <h1 class="edu-h1">B.Tech</h1>
+                            <h2 class="edu-h2">Artificial Intelligence & Data Science</h2>
+                            <h3 class="edu-h3">R P Sarathy Institute Of Technology | [2023 - 2026]</h3>
+                            <p class="edu-p">
+                                    I am currently pursuing my B.Tech in Artificial Intelligence & Data Science,
+                                where I am developing skills in Machine Learning, Data Analysis, Web Development, 
+                                and Problem Solving.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="edu2">
+                        <div class="edu-secetion">
+                            <h1 class="edu-h1">Diploma</h1>
+                        <h2 class="edu-h2">Mechanical Engineering</h2>
+                        <h3 class="edu-h3">D P C  Polytechnic College | [2017 - 2020]</h3>
+                        <p class="edu-p">
+                            I completed my Diploma in Mechanical Engineering in 2020, which helped me build
+                            a strong analytical and technical foundation before transitioning into the IT field.
+                        </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="skills" class="section">
+                <div class="header-container" id="skill-header">
+                    <div>Skills</div>
+                </div>
+                <div class="skills-container">
+                    <div class="skills-box">
+                        <div class="skills">
+                            <img src="./icons/html.svg">
+                            <span>HTML</span>
+                            <div class="percentage-line" style="--percent: 90%;" data-percentage="45">
+                                <div class="percentage"></div> 
+                            </div>
+                        </div>
+                        <div class="skills">
+                            <img src="./icons/css.svg">
+                            <span>CSS</span>
+                            <div class="percentage-line" style="--percent: 90%;" data-percentage="45">
+                                <div class="percentage"></div> 
+                            </div>
+                        </div>
+                        <div class="skills">
+                            <img src="./icons/js.svg" >
+                            <span>JAVA SCRIPT</span>
+                            <div class="percentage-line" style="--percent: 70%;" data-percentage="70">
+                                <div class="percentage"></div>
+                            </div> 
+                        </div>
+                        <div class="skills">
+                            <img src="./icons/php.svg">    
+                            <span>PHP</span>
+                            <div class="percentage-line" style="--percent: 45%;" data-percentage="45">
+                                <div class="percentage"></div> 
+                            </div>
+                        </div>
+                        <div class="skills">
+                            <img src="./icons/py.svg">
+                            <span>PYTHON</span>
+                            <div class="percentage-line" style="--percent: 45%;" data-percentage="45">
+                                <div class="percentage"></div> 
+                            </div>
+                        </div>
+                        <div class="skills">
+                            <img src="./icons/mysql.svg">
+                            <span>My SQL</span>
+                            <div class="percentage-line" style="--percent: 45%;" data-percentage="45">
+                                <div class="percentage"></div> 
+                            </div>
+                        </div>    
+                        <div class="skills">
+                            <img src="./icons/excel.png">
+                            <span>EXCEL</span>
+                            <div class="percentage-line" style="--percent: 45%;" data-percentage="45">
+                                <div class="percentage"></div> 
+                            </div>
+                        </div>
+                        <div class="skills">
+                            <img src="./icons/Pandas.png">
+                            <span>PANDAS</span>
+                            <div class="percentage-line" style="--percent: 45%;" data-percentage="45">
+                                <div class="percentage"></div> 
+                            </div>
+                        </div>
+                        <div class="skills">
+                            <img src="./icons/numpy.svg">
+                            <span>NUMPY</span>
+                            <div class="percentage-line" style="--percent: 45%;" data-percentage="45">
+                                <div class="percentage"></div> 
+                            </div>
+                        </div>
+                        <div class="skills">
+                            <img src="./icons/figma.svg" alt="">
+                            <span>FIGMA</span>
+                            <div class="percentage-line" style="--percent: 45%;" data-percentage="45">
+                                <div class="percentage"></div> 
+                            </div>
+                        </div>
+                        <div class="skills">
+                            <img src="./icons/github.svg" alt="">
+                            <span>GITHUB</span>
+                            <div class="percentage-line" style="--percent: 45%;" data-percentage="45">
+                                <div class="percentage"></div> 
+                            </div>
+                        </div>
+                        <div class="skills">
+                            <img src="./icons/git.svg" alt="">
+                            <span>GIT</span>
+                            <div class="percentage-line" style="--percent: 45%;" data-percentage="45">
+                                <div class="percentage"></div> 
+                            </div>
+                        </div>
+                        <!-- <div class="skills">
+                            <img src="./icons/api.png" alt="">
+                            <span>API</span>
+                            <div class="percentage-line" style="--percent: 45%;" data-percentage="45">
+                                <div class="percentage"></div> 
+                            </div>
+                        </div>     -->
+                    </div>
+                </div>
+            </section>
+        </div>
+        <section id="project">
+            <div class="header-container" id="pro">
+                <div class="header-name">Project</div>
+            </div>
+            <div class="project-container">
+                <div class="project-box">
+                    <div class="project">
+                        <div class="project-head">
+                            <div class="project-No">
+                                <h1>01</h1>
+                                <div class="project-like">
+                                    <h3>Project</h3>
+                                    <div class="like-button">
+                                        <input class="on" id="heart1" type="checkbox" onclick="handleLike(1)" />
+                                        <label class="like" for="heart1">
+                                            <svg class="like-icon" viewBox="0 0 24 24">
+                                                    <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z"></path>
+                                            </svg>
+                                            <span class="like-text">Likes</span>
+                                        </label>
+                                        <span class="like-count" id="likeCount1">0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="live-project">
+                                <a href="#">LIVE PROJECT</a>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="block" style="padding-left: 2%;">
+                                <h5>FILE SHARE <span>WEBSITE</span></h5>
+                            </div>
+                            <img class="block" id="c2c-img" src="./img/copytocopy.PNG" alt="" srcset="">
+    
+                            <div class="block">
+                                <div id="c2c-img2"><img src="./img/c2c.png" alt="" srcset=""></div>
+                            </div>
+                            <div class="block">
+                                <p class="project-paragaraph1">
+                                        this platform allows users to securely upload, download
+                                    and shareing the files using PHP & MySQL. it focuses on user
+                                    friendly desing, files handling security and basic 
+                                    access control.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <div class="project-head">
+                            <div class="project-No">
+                                <h1>02</h1>
+                                <div class="project-like">
+                                    <h3>Project</h3>
+                                    <div class="like-button">
+                                        <input class="on" id="heart2" type="checkbox" onclick="handleLike(2)" />
+                                        <label class="like" for="heart2">
+                                            <svg class="like-icon" viewBox="0 0 24 24">
+                                                <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z"></path>
+                                            </svg>
+                                            <span class="like-text">Likes</span>
+                                        </label>
+                                        <span class="like-count" id="likeCount2">0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="live-project">
+                                <a href="#" id="showBotLink">LIVE PROJECT</a>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="block" style="padding: 0;">
+                                <div class="chatbot">
+                                    <div class="chatbot-head">
+                                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 119.35">
+                                            <path d="M57.49,29.2V23.53a14.41,14.41,0,0,1-2-.93A12.18,12.18,0,0,1,50.44,7.5a12.39,12.39,0,0,1,2.64-3.95A12.21,12.21,0,0,1,57,.92,12,12,0,0,1,61.66,0,12.14,12.14,0,0,1,72.88,7.5a12.14,12.14,0,0,1,0,9.27,12.08,12.08,0,0,1-2.64,3.94l-.06.06a12.74,12.74,0,0,1-2.36,1.83,11.26,11.26,0,0,1-2,.93V29.2H94.3a15.47,15.47,0,0,1,15.42,15.43v2.29H115a7.93,7.93,0,0,1,7.9,7.91V73.2A7.93,7.93,0,0,1,115,81.11h-5.25v2.07A15.48,15.48,0,0,1,94.3,98.61H55.23L31.81,118.72a2.58,2.58,0,0,1-3.65-.29,2.63,2.63,0,0,1-.63-1.85l1.25-18h-.21A15.45,15.45,0,0,1,13.16,83.18V81.11H7.91A7.93,7.93,0,0,1,0,73.2V54.83a7.93,7.93,0,0,1,7.9-7.91h5.26v-2.3A15.45,15.45,0,0,1,28.57,29.2H57.49ZM82.74,47.32a9.36,9.36,0,1,1-9.36,9.36,9.36,9.36,0,0,1,9.36-9.36Zm-42.58,0a9.36,9.36,0,1,1-9.36,9.36,9.36,9.36,0,0,1,9.36-9.36Zm6.38,31.36a2.28,2.28,0,0,1-.38-.38,2.18,2.18,0,0,1-.52-1.36,2.21,2.21,0,0,1,.46-1.39,2.4,2.4,0,0,1,.39-.39,3.22,3.22,0,0,1,3.88-.08A22.36,22.36,0,0,0,56,78.32a14.86,14.86,0,0,0,5.47,1A16.18,16.18,0,0,0,67,78.22,25.39,25.39,0,0,0,72.75,75a3.24,3.24,0,0,1,3.89.18,3,3,0,0,1,.37.41,2.22,2.22,0,0,1,.42,1.4,2.33,2.33,0,0,1-.58,1.35,2.29,2.29,0,0,1-.43.38,30.59,30.59,0,0,1-7.33,4,22.28,22.28,0,0,1-7.53,1.43A21.22,21.22,0,0,1,54,82.87a27.78,27.78,0,0,1-7.41-4.16l0,0ZM94.29,34.4H28.57A10.26,10.26,0,0,0,18.35,44.63V83.18A10.26,10.26,0,0,0,28.57,93.41h3.17a2.61,2.61,0,0,1,2.41,2.77l-1,14.58L52.45,94.15a2.56,2.56,0,0,1,1.83-.75h40a10.26,10.26,0,0,0,10.22-10.23V44.62A10.24,10.24,0,0,0,94.29,34.4Z"/>
+                                        </svg>
+                                        <h1>CHATBOT</h1>
+                                    </div>
+                                    <div id="chatbox" class="chatbot-body"></div>
+                                    <div class="chatbot-footer">
+                                        <div class="chatinput">
+                                            <div class="send-img">
+                                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 515 515">
+                                                    <path fill="#ffffff" d="m48 448 416-192L48 64v149.333L346 256 48 298.667z"  class="color000000 svgShape"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block" id="chatbot-content">
+                                <h5 style="margin: 0;">CHATBOT</h5>
+                                <p class="project-paragaraph1"> 
+                                        To explore the fundamentals of user interaction
+                                    and dynamic response in systems, I developed a chatbot
+                                    using JavaScript.
+                                </p>
+                                <p class="project-paragaraph2">
+                                    The chatbot simulates simple human-like conversations
+                                through predefined patterns and event-based responses, 
+                                helping me understand front-end scripting and basic
+                                conversational logic.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <div class="project-head">
+                            <div class="project-No">
+                                <h1>03</h1>
+                                <div class="project-like">
+                                    <h3>Project</h3>
+                                    <div class="like-button">
+                                        <input class="on" id="heart3" type="checkbox" onclick="handleLike(3)" />
+                                        <label class="like" for="heart3">
+                                            <svg class="like-icon" viewBox="0 0 24 24">
+                                                <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z"></path>
+                                            </svg>
+                                            <span class="like-text">Likes</span>
+                                        </label>
+                                        <span class="like-count" id="likeCount3">0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="live-project">
+                                <a href="#">LIVE PROJECT</a>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="block">
+                                <h5 style=" font-size: clamp(1rem, 3vw, 2.5rem);">PERSONAL PROTFOLIO<span style="color: #ffffff;background-image: none;">WEBSITE</span> </h5>
+                            </div>
+                            <div class="block" id="portflio-img">
+                                <img src="./img/portflio.PNG" alt="" srcset="">
+                            </div>
+                            <div class="block">
+                                <p class="project-paragaraph1" style="  line-height: clamp(0.7rem, 3vw, 1.5rem);">
+                                    I designed and developed a personal portfolio website using HTML, CSS, and JavaScript to professionally present my skills, academic journey, and technical projects.
+                                    The site showcases my frontend development abilities with a clean layout, smooth transitions, and user-focused design.
+                                </p>
+                            </div>
+                            <div class="block">
+                                <p class="project-paragaraph2">
+                                    The website is responsive across all devices, offering smooth navigation, engaging visuals, and quick access to my projects and academic work.
+                                    It is optimized for performance and accessibility, ensuring a seamless user experience for all visitors.
+                                </p>
+                            </div>
+                    </div>
+                    </div>
+                    <div class="project">
+                        <div class="project-head">
+                            <div class="project-No">
+                                <h1>04</h1>
+                                <div class="project-like">
+                                    <h3>Project</h3>
+                                    <div class="like-button">
+                                        <input class="on" id="heart4" type="checkbox" onclick="handleLike(4)" />
+                                        <label class="like" for="heart4">
+                                            <svg class="like-icon" viewBox="0 0 24 24">
+                                                <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z"></path>
+                                            </svg>
+                                            <span class="like-text">Likes</span>
+                                        </label>
+                                        <span class="like-count" id="likeCount4">0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="live-project">
+                                <a href="#">LIVE PROJECT</a>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="block" id="aivoice-img">
+                                <img src="./img/ai voice.jpg" alt="" srcset="">
+                            </div>
+                            <div class="block">
+                                <h5 id="aivoice-txt">PERSONAL AI VIOCE ASSISTANT</h5>
+                            </div>
+                            <div class="block"> 
+                                <div class="project-paragaraph1">
+                                    <p>I developed a Python-based voice assistant inspired by my interest in artificial intelligence.
+                                    It works even with or without internet access.</p>
+                                    <p style="text-indent: 50px;">The assistant uses speech recognition and NLP to understand voice commands.
+                                    It allows hands-free operation for various tasks in any environment.</p>
+                                </div>
+                            </div>
+                            <div class="block" id="aivoice-img">
+                                <img src="./img/ai voice.jpg" alt="" srcset="">
+                            </div>
+                        </div>
+                    </div>
+                </div>             
+            </div>
+        </section>
+        <section id="certificate">
+            <div class="header-container" id="certificate-header">
+                <div>Certificate</div>
+            </div>
+            <div class="certificate-img">
+                <div class="img-roll_1">
+                    <img src="./certificate/coruse-1.jpg" alt="">                   
+                    <img src="./certificate/internship-4.jpg" alt="">
+                    <img src="./certificate/coruse-3.jpg" alt="">
+                    <img src="./certificate/coruse-4.jpg" alt="">
+
+                    <img src="./certificate/internship-1.jpg" alt="">
+                    <img src="./certificate/coruse-1.jpg" alt="">
+                    <img src="./certificate/internship-3.jpg" alt="">
+                    <img src="./certificate/internship-2.jpg" alt="">
+                </div>
+                <div class="img-roll_2">
+                    <img src="./certificate/internship-1.jpg" alt="">
+                    <img src="./certificate/coruse-1.jpg" alt="">
+                    <img src="./certificate/internship-3.jpg" alt="">
+                    <img src="./certificate/coruse-4.jpg" alt="">
+
+                    <img src="./certificate/coruse-1.jpg" alt="">                   
+                    <img src="./certificate/internship-4.jpg" alt="">
+                    <img src="./certificate/coruse-3.jpg" alt="">
+                    <img src="./certificate/internship-2.jpg" alt="">
+                </div>
+            </div>
+        </section>
+        <section id="resume">
+                <div class="resume_and_contact">
+                    <div class="resume-container">
+                        <div class="resume">
+                            <h1>contact</h1>
+                            <div class="contact-info">
+                                <div class="contact-imgs">
+                                    <div class="contact-img"><svg  xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="412" height="412"><path d="M12,0A10.011,10.011,0,0,0,2,10c0,5.282,8.4,12.533,9.354,13.343l.646.546.646-.546C13.6,22.533,22,15.282,22,10A10.011,10.011,0,0,0,12,0Zm0,15a5,5,0,1,1,5-5A5.006,5.006,0,0,1,12,15Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                    </div>
+                                    <div class="contact-img"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" viewBox="0 0 24 24" width="512" height="512"><path d="M23.954,5.542,15.536,13.96a5.007,5.007,0,0,1-7.072,0L.046,5.542C.032,5.7,0,5.843,0,6V18a5.006,5.006,0,0,0,5,5H19a5.006,5.006,0,0,0,5-5V6C24,5.843,23.968,5.7,23.954,5.542Z"/><path d="M14.122,12.546l9.134-9.135A4.986,4.986,0,0,0,19,1H5A4.986,4.986,0,0,0,.744,3.411l9.134,9.135A3.007,3.007,0,0,0,14.122,12.546Z"/></svg>
+                                    </div>
+                                    <div class="contact-img"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="512" height="512"><path d="M23,11a1,1,0,0,1-1-1,8.008,8.008,0,0,0-8-8,1,1,0,0,1,0-2A10.011,10.011,0,0,1,24,10,1,1,0,0,1,23,11Zm-3-1a6,6,0,0,0-6-6,1,1,0,1,0,0,2,4,4,0,0,1,4,4,1,1,0,0,0,2,0Zm2.183,12.164.91-1.049a3.1,3.1,0,0,0,0-4.377c-.031-.031-2.437-1.882-2.437-1.882a3.1,3.1,0,0,0-4.281.006l-1.906,1.606A12.784,12.784,0,0,1,7.537,9.524l1.6-1.9a3.1,3.1,0,0,0,.007-4.282S7.291.939,7.26.908A3.082,3.082,0,0,0,2.934.862l-1.15,1C-5.01,9.744,9.62,24.261,17.762,24A6.155,6.155,0,0,0,22.183,22.164Z"/></svg>
+                                    </div>
+                                </div>
+                                <div class="contact-txt">
+                                    <p>5/67 - mullichettipatti, thinnapatti(PO),<br> Kadaiyampatti(TK), Salem - 636 305.</p>
+                                    <a href="mailto:bharathstark1114@gmail.com?subject=Hello&body=I wanted to contact you.">bharathstark1114@gmail.com</a>
+                                    <a href="tel:9944263467">+91 9944263467</a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a class="social-link social-link1" target="_blank" href="https://www.linkedin.com/in/bharath-s1114/">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16"><path fill="#000" d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/></svg>
+                                </a>
+                                <a class="social-link social-link2" target="_blank" href="https://github.com/bharath-1114">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16"><path fill="#000" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></svg>
+                                </a>
+                                <a class="social-link social-link3" target="_blank" href="mailto:bharathstark1114@gmail.com?subject=Hello&body=I wanted to contact you.">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" style="enable-background:new 0 0 128 128" xml:space="preserve"><path style="fill:#000" d="M26.526 13.021H0v101.958h19.376v-81.71l7.189-20.209-.039-.039zm101.474 0v101.958h-19.376V33.25L64 77.873 23.077 36.97l6.821-20.578 34.083 34.083 37.454-37.454H128z"/></svg>
+                                </a>
+                                <a class="social-link social-link4" target="_blank" href="https://www.instagram.com/starck_bharath?utm_source=qr&igsh=MW9vOWx3bmtwaW00dw==">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-instagram" viewBox="0 0 16 16"><path fill="#000" d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/></svg>
+                                </a>
+                            </div>        
+                        </div>          
+                    </div>
+    
+                    <div id="contact" class="contact-container">
+                        <div class="contact">
+                            <h1>Contact Us</h1>
+                            <form onsubmit="sendemail(event)">
+                                <div class="input-file">
+                                    <input type="text" name="name" id="name" placeholder="Name:" required>
+                                </div>
+                                <div class="input-file">
+                                    <input type="email" name="email" id="email" placeholder="email:" required>
+                                </div>
+                                <div class="input-file">
+                                    <textarea name="message" id="message" placeholder="Message..."  required></textarea>
+                                </div>
+                                <button class="input-file" type="submit">
+                                    <div class="svg-wrapper-1">
+                                        <div class="svg-wrapper">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                                <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <span>Send</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div> 
+        </section>
+
+        <section id="personal-chatbot">
+            <button id="chat-open">?</button>
+            <div id="botMsgBox" class="botMsg hidden">I’m here!</div>
+            <div class="notified-txt">Ask away!</div>
+            <div class="chatbot-container">
+                <div class="personalchat-header">
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 119.35">
+                        <path d="M57.49,29.2V23.53a14.41,14.41,0,0,1-2-.93A12.18,12.18,0,0,1,50.44,7.5a12.39,12.39,0,0,1,2.64-3.95A12.21,12.21,0,0,1,57,.92,12,12,0,0,1,61.66,0,12.14,12.14,0,0,1,72.88,7.5a12.14,12.14,0,0,1,0,9.27,12.08,12.08,0,0,1-2.64,3.94l-.06.06a12.74,12.74,0,0,1-2.36,1.83,11.26,11.26,0,0,1-2,.93V29.2H94.3a15.47,15.47,0,0,1,15.42,15.43v2.29H115a7.93,7.93,0,0,1,7.9,7.91V73.2A7.93,7.93,0,0,1,115,81.11h-5.25v2.07A15.48,15.48,0,0,1,94.3,98.61H55.23L31.81,118.72a2.58,2.58,0,0,1-3.65-.29,2.63,2.63,0,0,1-.63-1.85l1.25-18h-.21A15.45,15.45,0,0,1,13.16,83.18V81.11H7.91A7.93,7.93,0,0,1,0,73.2V54.83a7.93,7.93,0,0,1,7.9-7.91h5.26v-2.3A15.45,15.45,0,0,1,28.57,29.2H57.49ZM82.74,47.32a9.36,9.36,0,1,1-9.36,9.36,9.36,9.36,0,0,1,9.36-9.36Zm-42.58,0a9.36,9.36,0,1,1-9.36,9.36,9.36,9.36,0,0,1,9.36-9.36Zm6.38,31.36a2.28,2.28,0,0,1-.38-.38,2.18,2.18,0,0,1-.52-1.36,2.21,2.21,0,0,1,.46-1.39,2.4,2.4,0,0,1,.39-.39,3.22,3.22,0,0,1,3.88-.08A22.36,22.36,0,0,0,56,78.32a14.86,14.86,0,0,0,5.47,1A16.18,16.18,0,0,0,67,78.22,25.39,25.39,0,0,0,72.75,75a3.24,3.24,0,0,1,3.89.18,3,3,0,0,1,.37.41,2.22,2.22,0,0,1,.42,1.4,2.33,2.33,0,0,1-.58,1.35,2.29,2.29,0,0,1-.43.38,30.59,30.59,0,0,1-7.33,4,22.28,22.28,0,0,1-7.53,1.43A21.22,21.22,0,0,1,54,82.87a27.78,27.78,0,0,1-7.41-4.16l0,0ZM94.29,34.4H28.57A10.26,10.26,0,0,0,18.35,44.63V83.18A10.26,10.26,0,0,0,28.57,93.41h3.17a2.61,2.61,0,0,1,2.41,2.77l-1,14.58L52.45,94.15a2.56,2.56,0,0,1,1.83-.75h40a10.26,10.26,0,0,0,10.22-10.23V44.62A10.24,10.24,0,0,0,94.29,34.4Z"/>
+                    </svg>
+                    STARK
+                </div>
+                <div class="personalchat-body"></div>
+                
+                <div class="personalchat-input">
+                    <div class="input-section">
+                        <input type="text" id="txtInput" autocomplete="off" placeholder="Ask anything" autofocus />
+                    </div>
+                    <div class="send">
+                        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 512 512"
+                            id="sendmail">
+                            <path d="m48 448 416-192L48 64v149.333L346 256 48 298.667z" fill="#f2d200"
+                                class="color000000 svgShape"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="copyrigth">
+            <p >Copyrigth &copy; 2024 Designed by BHARATH</p>
+        </div>
+    </footer>
+
+
+
+    <script src="main.js"></script>
+    <script src="chatbot.js"></script>
+
+</body>
+</html>
+
