@@ -570,7 +570,7 @@ function initializeLikes(buttonId) {
 
 // this for all like buttons
 function initializeAllLikes() {
-  for (let i = 1; i <= 4; i++) {
+  for (let i = 1; i <= 5; i++) {
     initializeLikes(i);
   }
 }
@@ -581,7 +581,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Call for all likes reset section
 localStorage.setItem("likeCount" + i, 26);
 function resetAllLikes() {
-  for (let i = 1; i <= 4; i++) {
+  for (let i = 1; i <= 5; i++) {
     localStorage.removeItem("liked" + i);
 
     const checkbox = document.getElementById("heart" + i);

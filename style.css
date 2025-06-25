@@ -1791,7 +1791,9 @@ input[type="checkbox"]:checked+label .like-icon {
   font-weight: 400;
   line-height: clamp(0.8rem, 3vw, 2rem);
 }
-
+#protfolio-content{
+  height: 27vh;
+}
 .block img {
   background-size: cover;
   box-sizing: border-box;
@@ -1808,13 +1810,12 @@ input[type="checkbox"]:checked+label .like-icon {
 }
 #c2c-img,
 #c2c-img2,
-#portflio-img,
+#protfolio-img,
 #aivoice-img {
   width: 35%;
   height: auto;
   box-sizing: border-box;
   margin-right: 1%;
-  transition: all 0.3s ease-in-out;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5),
     inset 0 2px 5px rgba(0, 0, 0, 0.6);
   padding: 0;
@@ -1829,6 +1830,27 @@ input[type="checkbox"]:checked+label .like-icon {
   background-image: linear-gradient(to top, #2f92da, #29b2db, #00d6fa, #00e5e5, #36f2ca);
   border-radius: 100%;
 }
+.chess-board{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chess-board img{
+  height: auto;
+  width: 80%;
+  box-sizing: border-box;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5),
+    inset 0 2px 5px rgba(0, 0, 0, 0.6);
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
 
 #chatbot-content {
   height: auto;
@@ -2754,6 +2776,9 @@ svg{
     width: 90%;
     padding: 5px;
   }
+  #protfolio-content{
+    height: auto;
+  }
 }
 
 @media screen and (max-width: 1045px) {
@@ -2766,6 +2791,9 @@ svg{
   .project-box {
     width: 100%;
     padding: 5px;
+  }
+  .chatbot-body {
+    height: 35vh;
   }
 }
 
@@ -2835,10 +2863,6 @@ svg{
     font-size: clamp(0.7rem, 2vw, 1.5rem);
   }
 
-  .chatbot-body {
-    height: 42vh;
-  }
-
   .resume_and_contact {
     display: flex;
     flex-direction: column;
@@ -2902,7 +2926,7 @@ svg{
   }
 
   .chatbot-body {
-    height: 25vh;
+    height: 24vh;
   }
 
   .contact {
