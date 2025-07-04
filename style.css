@@ -2927,6 +2927,7 @@ svg{
 
   .chatbot-body {
     height: 24vh;
+    max-height: 24vh;
   }
 
   .contact {
@@ -2935,8 +2936,9 @@ svg{
 }
 @media screen and (max-width: 480px) {
   .chatbot-body {
-    background-color: #00e5e5;
+    background-color: #e56f00;
     height: 22vh;
+    max-height: 22vh;
   }
 
 }
