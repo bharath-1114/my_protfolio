@@ -656,3 +656,9 @@ function sendemail(e) {
 
 
 
+
+
+window.addEventListener("resize", () => {
+  info.innerHTML = `
+  <strong>Screen Info:</strong><br>
+  Width:
