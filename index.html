@@ -711,7 +711,22 @@
             <p >Copyrigth &copy; 2024 Designed by BHARATH</p>
         </div>
     </footer>
+    <p id="info"></p>
 
+    <script>
+      const info = document.getElementById("info");
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      const dpr = window.devicePixelRatio;
+    
+      info.innerHTML = `
+        <strong>Screen Info:</strong><br>
+        Width: ${width}px <br>
+        Height: ${height}px <br>
+        Device Pixel Ratio: ${dpr}
+      `;
+    </script>
+    
 
 
     <script src="main.js"></script>
