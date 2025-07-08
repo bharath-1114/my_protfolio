@@ -1813,11 +1813,11 @@ input[type="checkbox"]:checked+label .like-icon {
 #c2c-img,
 #c2c-img2,
 #protfolio-img,
-#aivoice-img {
-  width: 35%;
+#aivoice-img{
+  width: 30%;
   height: auto;
   box-sizing: border-box;
-  margin-right: 1%;
+  margin-right: 2%;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5),
     inset 0 2px 5px rgba(0, 0, 0, 0.6);
   padding: 0;
@@ -1832,6 +1832,7 @@ input[type="checkbox"]:checked+label .like-icon {
   background-image: linear-gradient(to top, #2f92da, #29b2db, #00d6fa, #00e5e5, #36f2ca);
   border-radius: 100%;
 }
+.chat-bot,
 .chess-board{
   height: 100%;
   width: 100%;
@@ -1852,137 +1853,21 @@ input[type="checkbox"]:checked+label .like-icon {
     transform: scale(1.02);
   }
 }
-
-
-#chatbot-content {
+.chat-bot img{
   height: auto;
-  width: 40%;
-  margin-right: clamp(1%, 3%, 5%);
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-.chatbot {
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 2%;
-  padding: 0;
-  height: auto;
-  width: 100%;
-  max-width: 300px;
-  border-radius: 20px;
+  width: 48%;
+  box-sizing: border-box;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5),
     inset 0 2px 5px rgba(0, 0, 0, 0.6);
+  padding: 0;
   transition: all 0.3s ease-in-out;
 
   &:hover {
     transform: scale(1.02);
   }
 }
-.chatbot-head {
-  height: 15%;
-  display: flex;
-  align-items: center;
-  background-color: #00ccff;
-  border: 1px solid #04c2f1;
-  border-radius: 20px 20px 0 0;
-  gap: 1%;
-  padding: 6px;
-}
-.chatbot-head svg {
-  background-color: #ffffff;
-  height: auto;
-  width: clamp(30px, 5vw, 50px);
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  padding: 3%;
-  box-sizing: border-box; 
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5),
-    inset 0 1px 3px rgba(0, 0, 0, 0.6);
-}
-.chatbot-head h1 {
-  font-family: "Open Sans", sans-serif;
-  color: #ffffff;
-  letter-spacing: -1px;
-  font-size: clamp(1rem, 3vw, 2rem);
-  -webkit-text-stroke: 0.1px #00ccff;
-}
-.chatbot-body {
-  height: 43vh;
-  width: 100%;
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-  font-family: sans-serif;
-  padding: 2%;
-  gap: 5%;
-}
-.chatbot-footer {
-  height: 15%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2%;
-  border-radius: 0 0 20px 20px;
-}
-.chatinput{
-  background-color: #00ccff31;
-  border: 2px solid #04c2f1;
-  border-radius: 50px;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  position: relative;
-}
-.send-img svg {
-  background-color: #04c2f1;
-  height: auto;
-  width: clamp(30px, 5vw, 45px);
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  padding: 15%;
-  box-sizing: border-box;
-  position: relative;
-  top: 2px;
-  right: -10%;
-}
 
-.message {
-  display: inline-block;
-  padding: 3%;
-  margin: 5px 0;
-  font-size: clamp(0.7rem, 3vw, 1.3rem);
-  opacity: 0;
-  animation: bounceIn 0.4s forwards;
-  clear: both;
-}
-.chat {
-  background-color: #00ccff;
-  border: 1px solid #04c2f1;
-  color: #000;
-  border-radius: 10px 1px 10px 10px;
-  align-self: flex-end;
-  float: right;
-  clear: both;
-}
-.replay {
-  background-color: #f7f7f7;
-  border: 1px solid #e4e4e4;
-  color: #000;
-  border-radius: 1px 10px 10px 10px;
-  align-self: flex-start;
-  float: left;
-  clear: both;
-}
-@keyframes fadeIn {
-  from {opacity: 0; transform: translateY(10px);}
-  to {opacity: 1; transform: translateY(0);}
-}
+
 /*======================================================================*/
 #certificate-header {
   top: 0;
@@ -2795,9 +2680,6 @@ svg{
     width: 100%;
     padding: 5px;
   }
-  .chatbot-body {
-    height: 35vh;
-  }
 }
 
 @media screen and (max-width: 875px) {
@@ -2927,37 +2809,15 @@ svg{
     padding: 5px;
     gap: 1px;
   }
-
-  .chatbot-body {
-    height: 24vh;
-    max-height: 24vh;
-  }
-
   .contact {
     margin: 5px;
   }
 }
-@media screen and (max-width: 480px) {
-  .chatbot-body {
-    background-color: #e56f00;
-    height: 100%;
 
-  }
-  .chatbot {
-    height: 30vh;
-  }
-}
+@media (min-width: 500px) and (max-width: 3500px) {
 
-@media (min-width: 500px) and (max-width: 1500px) {
-  #home,#aboutMe,#education {
-    height: 100%;
-    max-height: 50vh;
-  }
-    #skills,#project {
-      max-height: 100%;
-    }
     #certificate {
-      max-height: 100vh;
+      height: 100vh;
     }
     #resume {
       position: relative;

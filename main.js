@@ -653,16 +653,3 @@ function sendemail(e) {
     });
 }
 
-
-
-
-
-
-window.addEventListener("resize", () => {
-  info.innerHTML = `
-    <strong>Screen Info:</strong><br>
-    Width: ${window.innerWidth}px <br>
-    Height: ${window.innerHeight}px <br>
-    Device Pixel Ratio: ${window.devicePixelRatio}
-  `;
-});
