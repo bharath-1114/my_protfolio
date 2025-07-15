@@ -771,9 +771,9 @@ header {
 }
 .slider {
   position: absolute;
-  top: 1px;
+  top: -2px;
   left: 0;
-  right: 0;
+  right: 1px;
   bottom: 0;
   background-color: #E0E0E0;
   border: 2px solid #d6d5d5;
@@ -1227,7 +1227,7 @@ header {
   justify-content: center;
   left: 50%;
   right: 50%;
-  transform: translate(-37.5%, -7.2%);
+  transform: translate(-41.5%, -8%);
   z-index: 2;
 }
 .bobule{
